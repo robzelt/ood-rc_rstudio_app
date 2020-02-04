@@ -1,4 +1,4 @@
-# Batch Connect - RStduio App
+# Batch Connect - RStudio Desktop
 
-A Batch Connect app designed for OSC OnDemand that launches RStudio App within a
+A Batch Connect app designed for Open OnDemand that launches RStudio App within a
 Longleaf batch job.
