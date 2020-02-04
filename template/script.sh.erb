@@ -1,0 +1,31 @@
+  #!/usr/bin/env bash 
+
+  export XDG_RUNTIME_DIR=$HOME/ondemand/.xdg
+
+  # Launch Mate Window Manager and Panel
+  marco --no-composite --no-force-fullscreen --sm-disable &
+  # mate-panel blocks, but does not work reliably when launched in the same subshell as marco
+  mate-panel &
+
+  # Clean the environment
+  module purge
+
+  cd "$HOME"
+
+  #
+  # Start Freesurfer
+  #
+
+  # Load the required environment
+
+
+  module load r
+  module load rstudio
+
+  # Launch FSL
+
+  module list  # List loaded modules for debugging purposes
+  rstudio
+
+
+  

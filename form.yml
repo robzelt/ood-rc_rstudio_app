@@ -1,0 +1,35 @@
+---
+cluster: "longleaf"
+form:
+  - bc_num_hours
+#  - number_of_nodes
+  - bc_num_slots
+  - custom_queue
+  - extra_slurm_args
+  - bc_vnc_resolution
+  - bc_email_on_started
+
+attributes:
+  number_of_nodes:
+    label: Number of nodes
+    widget: select
+    value: 1
+    options: ["1"]
+
+  bc_num_slots:
+    label: Number of cpus
+    help: |
+      Unless you are certain you are running parallel code you should specify <b>one</b> cpu.
+    value: 1
+    min: 1
+    max: 4
+  custom_queue:
+    label: Partition
+    widget: select
+    value: webportal
+    options: ["webportal"]
+  extra_slurm_args:
+      label: Additional Job Submission Arguments
+      widget: text_field
+  bc_vnc_resolution:
+    required: true

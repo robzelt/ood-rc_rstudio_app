@@ -1,0 +1,14 @@
+---
+batch_connect:
+  template: vnc
+  set_host: "host=$(hostname)"
+script:
+  queue_name: <%= custom_queue.blank? ? "null" : custom_queue.strip %>
+  native:
+    - "-N"
+    - "1"
+    - "-n"
+    - "<%= bc_num_slots.blank? ? 1 : bc_num_slots %>"
+    <% Shellwords.split(extra_slurm_args).each do |arg| %>
+    - <%= "#{arg}" %>
+    <% end %>

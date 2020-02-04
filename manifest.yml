@@ -1,0 +1,8 @@
+---
+name: RStudio App
+category: Interactive Apps
+subcategory: GUIs
+role: batch_connect
+description: |
+  This app will launch the RStudio App on the Longleaf cluster. You will be able
+  to interact with the RStudio App through a VNC session.
